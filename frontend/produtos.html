@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="E-commerce - Lista de Produtos" />
+    <title>E-commerce - Produtos</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <h1>E-commerce</h1>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="sacola.html">Sacola</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container">
+        <h2>Produtos</h2>
+
+        <form id="filterForm" class="filter-form">
+          <label for="categoria">Filtrar por categoria:</label>
+          <select name="categoria" id="categoria">
+            <option value="">Todas</option>
+            <option value="eletronicos">Eletrônicos</option>
+            <option value="roupas">Roupas</option>
+            <option value="livros">Livros</option>
+            <option value="casa">Casa e Decoração</option>
+          </select>
+          <button type="submit" class="btn">Filtrar</button>
+        </form>
+
+        <div
+          id="loading"
+          class="loading"
+          role="status"
+          aria-live="polite"
+          aria-hidden="true"
+        >
+          Carregando produtos...
+        </div>
+        <div
+          id="error"
+          class="error"
+          role="alert"
+          aria-live="assertive"
+          aria-hidden="true"
+        ></div>
+
+        <div id="produtos-lista" class="produtos-grid">
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 E-commerce. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/produtos.js"></script>
+  </body>
+</html>
