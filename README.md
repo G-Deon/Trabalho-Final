@@ -647,7 +647,7 @@ CREATE TABLE sacola_itens (
 CREATE TABLE cupons (
     id SERIAL PRIMARY KEY,
     codigo VARCHAR(50) NOT NULL UNIQUE,
-    tipo VARCHAR(20) NOT NULL, -- 'percentual' ou 'fixo'
+    tipo VARCHAR(20) NOT NULL,
     desconto DECIMAL(10, 2) NOT NULL,
     ativo BOOLEAN DEFAULT true,
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -884,19 +884,3 @@ Trabalho Final/
 - ✅ CORS
 - ✅ Docker e Docker Compose
 - ✅ Variáveis de ambiente
-
----
-
-## 📄 Licença
-
-Projeto desenvolvido para fins acadêmicos.
-
----
-
-## 👨‍💻 Autor
-
-Desenvolvido como trabalho final da disciplina de Programação Web.
-
----
-
-**🎉 Boa sorte na apresentação!**
